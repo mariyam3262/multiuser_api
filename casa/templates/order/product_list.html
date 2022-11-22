@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Product list</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Collection</th>
+                <th>surface</th>
+                <th>Weight</th>
+                <th>Thickness</th>
+                <th>Size</th>
+                <th>Image</th>
+                <th>Preivew</th>
+                <th>Product Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in object_list%}
+            <tr>
+                <td>{{item.product_name}}</td>
+                <td>{{item.collection}}</td>
+                <td>{{item.surface}}</td>
+                <td>{{item.weight}}</td>
+                <td>{{item.thickness}}</td>
+                <td>{{item.size}}</td>
+                <td>{{item.product_image}}</td>
+                <td>{{item.preview}}</td>
+                <td>{{item.product_quantity}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+        
+    </table>
+</body>
+</html>

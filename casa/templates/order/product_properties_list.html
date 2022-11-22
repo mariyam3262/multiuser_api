@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties List</title>
+</head>
+<body>
+    
+    <table>
+
+    {% for item in object_list%}
+        {%if item.size%}
+            <tr>
+                <td>{{item.size}}</td>
+            </tr>
+        {%endif%}
+        {%if item.surface%}
+            <tr>
+                <td>{{item.surface}}</td>
+            </tr>
+        {%endif%}
+        {%if item.collection%}
+            <tr>
+                <td>{{item.collection}}</td>
+            </tr>
+            <tr>
+                <td>{{item.pdf}}</td>
+            </tr>
+        {%endif%}
+        {%if item.thickness%}
+            <tr>
+                <td>{{item.thickness}}</td>
+            </tr>
+        {%endif%}
+    {%endfor%}
+        
+    </table>
+
+</body>
+</html>

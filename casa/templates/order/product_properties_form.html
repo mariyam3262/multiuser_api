@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Properties Create</h1>
+    
+
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token%}
+            {%if form.size %}
+                <p><label for="id_size">Size : </label>
+                    <input type="text" id="id_size" name="size" value="{{size}}"></p>
+            {%endif%}
+
+            {%if form.thickness%}
+                <p><label for="id_thickness">thickness : </label>
+                    <input type="text" id="id_thickness" name="thickness" value="{{thickness}}"></p>
+            {%endif%}
+
+            {%if form.surface%}
+                <p><label for="id_surface">surface : </label>
+                    <input type="text" id="id_surface" name="surface" value="{{surface}}"></p>
+            {%endif%}
+            
+            {%if form.collection%}
+                <p><label for="id_collection">collection : </label>
+                    <input type="text" id="id_collection" name="collection" value="{{collection}}"></p>
+                    <p><label for="id_pdf">pdf : </label>
+                        <input type="file" id="id_pdf" name="pdf" value="{{pdf}}"></p>
+            {%endif%}
+
+            <input type="submit">
+        </form>
+    
+</body>
+</html>

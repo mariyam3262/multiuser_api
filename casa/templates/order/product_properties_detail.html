@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties Detail</title>
+</head>
+<body>
+   <table>
+
+        {% if object.size%}
+
+           <tr>
+                <th>Size : </th>
+                <td>{{object.size}}</td>
+           </tr>
+
+        {%endif%}
+
+        {% if object.collection%}
+
+           <tr>
+                <th>Collection :</th>
+                <td>{{object.collection}}</td>
+           </tr>
+           <tr>
+                <th>Pdf :</th>
+                <td>{{object.pdf}}</td>
+            </tr>
+           
+        {%endif%}
+        {% if object.surface%}
+
+           <tr>
+                <th>Surface :</th>
+                <td>{{object.surface}}</td>
+           </tr>
+           
+        {%endif%}
+        {% if object.thickness%}
+
+           <tr>
+                <th>Thickness :</th>
+                <td>{{object.thickness}}</td>
+           </tr>
+           
+        {%endif%}
+
+   </table>
+    
+</body>
+</html>
